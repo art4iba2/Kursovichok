@@ -222,10 +222,8 @@ def excepthook(exc_type, exc_value, exc_tb):
     print("error message:\n", tb)
     QtWidgets.QApplication.quit()
 
-
-if __name__ == '__main__':
-    sys.excepthook = excepthook
-    app = QtWidgets.QApplication([])
-    application = Game()
-    application.show()
-    sys.exit(app.exec())
+sys.excepthook = excepthook
+app = QtWidgets.QApplication([])
+application = Game()
+application.show()
+sys.exit(app.exec())
