@@ -122,8 +122,8 @@ class Game(QWidget):
     def check_positions(self):
         for i in range(len(self.board)):
             for j in range(len(self.board[i])):
-                print(i, j)
-                print(self.check_position_for_lose((i, j)))
+                #print(i, j)
+                #print(self.check_position_for_lose((i, j)))
                 if self.check_position_for_lose((i, j)):
                     self.board[i][j] = EMPTY
 
